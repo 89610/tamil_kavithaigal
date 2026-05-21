@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ta" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>தமிழ் கவிதைகள் | Tamil Kavithaigal</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Tamil:wght@400;600;700&family=Playfair+Display:ital,wght@0,700;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+
+  <!-- Boxicons -->
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ── LOADING SCREEN ── -->
+  <div id="loader" class="loader">
+    <div class="loader-inner">
+      <div class="loader-lotus">🪷</div>
+      <p class="loader-text">கவிதைகள் ஏற்றுகிறோம்…</p>
+    </div>
+  </div>
+
+  <!-- ── HEADER ── -->
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="brand">
+        <span class="brand-icon">🪷</span>
+        <div class="brand-text">
+          <span class="brand-tamil">தமிழ் கவிதைகள்</span>
+          <span class="brand-sub">Tamil Kavithaigal & Quotes</span>
+        </div>
+      </div>
+
+      <nav class="header-actions">
+        <!-- Search -->
+        <div class="search-wrap">
+          <i class='bx bx-search'></i>
+          <input type="text" id="searchInput" placeholder="தேடுக / Search…" autocomplete="off" />
+          <button id="clearSearch" class="clear-btn" title="Clear"><i class='bx bx-x'></i></button>
+        </div>
+
+        <!-- Random -->
+        <button id="randomBtn" class="icon-btn" title="Random Quote">
+          <i class='bx bx-shuffle'></i>
+        </button>
+
+        <!-- Favorites -->
+        <button id="favsToggle" class="icon-btn" title="My Favourites">
+          <i class='bx bx-heart'></i>
+          <span id="favCount" class="badge">0</span>
+        </button>
+
+        <!-- Dark/Light -->
+        <button id="themeToggle" class="icon-btn" title="Toggle Theme">
+          <i class='bx bx-moon'></i>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ── HERO / FEATURED SLIDER ── -->
+  <section class="hero-section">
+    <div class="slider-container" id="featuredSlider">
+      <!-- Slides injected by JS -->
+    </div>
+    <div class="slider-dots" id="sliderDots"></div>
+  </section>
+
+  <!-- ── MAIN CONTENT ── -->
+  <main class="main-content">
+
+    <!-- Category Tabs -->
+    <section class="categories-section">
+      <h2 class="section-heading">வகைகளை தேர்வு செய்யவும் <span>/ Choose Category</span></h2>
+      <div class="category-tabs" id="categoryTabs">
+        <!-- Tabs injected by JS -->
+      </div>
+    </section>
+
+    <!-- Language Filter -->
+    <div class="lang-filter">
+      <button class="lang-btn active" data-lang="all">அனைத்தும் / All</button>
+      <button class="lang-btn" data-lang="tamil">தமிழ் Only</button>
+      <button class="lang-btn" data-lang="english">English Only</button>
+    </div>
+
+    <!-- Cards Grid -->
+    <section class="cards-section">
+      <div class="cards-grid" id="cardsGrid">
+        <!-- Cards injected by JS -->
+      </div>
+      <p id="noResults" class="no-results hidden">எதுவும் கிடைக்கவில்லை / No results found.</p>
+    </section>
+
+  </main>
+
+  <!-- ── FAVOURITES PANEL ── -->
+  <aside id="favsPanel" class="favs-panel hidden">
+    <div class="favs-header">
+      <h3><i class='bx bx-heart-circle'></i> என் நேசமானவை</h3>
+      <button id="closeFavs" class="icon-btn"><i class='bx bx-x'></i></button>
+    </div>
+    <div id="favsList" class="favs-list">
+      <p class="empty-favs">உங்கள் நேசமான கவிதைகளை சேர்க்கவும்! / Add your favourites!</p>
+    </div>
+  </aside>
+  <div id="overlay" class="overlay hidden"></div>
+
+  <!-- ── TOAST ── -->
+  <div id="toast" class="toast hidden"></div>
+
+  <!-- ── FOOTER ── -->
+  <footer class="site-footer">
+    <p>💛 தமிழ் மொழியில் உணர்வுகளை வெளிப்படுத்துங்கள் | Express emotions in Tamil</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
